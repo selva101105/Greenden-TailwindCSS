@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Page</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+   
+ <!-- Navbar  -->
+  <header class="bg-green-200 shadow-lg">
+    <div class="container mx-1 flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-black-800">GREENDEN</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="product.html" class="hover:underline">Products</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    
+    <!-- Mobile Menu Button  -->
+      <button id="open-navtion" class="md:hidden bg-green-500 text-white px-4 py-2 rounded">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Side Navbar (Mobile)  -->
+  <section id="selva" class="bg-green-100 fixed top-0 right-0 w-3/4 sm:w-1/2 lg:w-1/4 h-full transform translate-x-full transition-transform duration-300 shadow-lg">
+    <div class="text-right p-5">
+      <p id="close-navtion" class="inline cursor-pointer text-xl font-bold">X</p>
+    </div>
+    <ul class="flex flex-col gap-6 items-center text-gray-600">
+      <li><a href="./index.html" class="hover:text-green-500">Home</a></li>
+      <li><a href="./product.html" class="hover:text-green-500">Products</a></li>
+      <li><a href="./contact.html" class="hover:text-green-500">Contact</a></li>
+    </ul>
+  </section>
+  
+
+  <!-- Search Bar -->
+  <section class="py-6">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Our Products</h2>
+      <input type="text" id="search-input" placeholder="Search for a Product..." 
+        class="w-full sm:w-3/4 md:w-1/2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+      />
+    </div>
+  </section>
+
+
+
+ 
+<!-- Best Seller Section-->
+    <section class="p-4 text-center">
+        <h1 class="font-bold mt-5 mb-5 text-3xl">Best Seller</h1>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+            
+            <div>
+                <img src="./image/bestseller_1.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Rose">
+                <h1>Rose</h1>
+                <p>$20</p>
+            </div>
+
+            
+            <div>
+                <img src="./image/bestseller_2.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Tillandsia">
+                <h1>Tulips</h1>
+                <p>$40</p>
+            </div>
+
+            
+            <div>
+                <img src="./image/bestseller_3.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Cactus">
+                <h1>Campanula</h1>
+                <p>$30</p>
+            </div>
+
+            
+            <div>
+                <img src="./image/bestseller_4.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Pampus">
+                <h1>Phalaenopis orchid</h1>
+                <p>$25</p>
+            </div>
+
+            <div>
+                <img src="./image/bestseller_1.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Rose">
+                <h1>Rose</h1>
+                <p>$20</p>
+            </div>
+
+            
+            <div>
+                <img src="./image/bestseller_2.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Tillandsia">
+                <h1>Tulips</h1>
+                <p>$40</p>
+            </div>
+
+            
+            <div>
+                <img src="./image/bestseller_3.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Cactus">
+                <h1>Campanula</h1>
+                <p>$30</p>
+            </div>
+
+            
+            <div>
+                <img src="./image/bestseller_4.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="Pampus">
+                <h1>Phalaenopis orchid</h1>
+                <p>$25</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-100 text-center p-5 mt-10">
+        
+        <p>&copy; 2025 Greenden.</p>
+    </footer>
+ 
+
+  <!-- JavaScript -->
+  <script>
+    // Side Navbar functionality
+    document.getElementById('open-navtion').addEventListener('click', () => {
+      document.getElementById('selva').style.transform = 'translateX(0)';
+    });
+
+    document.getElementById('close-navtion').addEventListener('click', () => {
+      document.getElementById('selva').style.transform = 'translateX(100%)';
+    });
+  </script>
+
+</body>
+</html>
