@@ -15,18 +15,34 @@
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Navbar -->
+ <!-- Navbar -->                       
   <header class="bg-green-200 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center p-4">
+    <div class="container mx-1 flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-black-800">GREENDEN</h1>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="product.html" class="hover:underline">Products</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        </ul>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="product.html" class="hover:underline">Products</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
       </nav>
+
+   <!-- Mobile Menu Button   -->
+      <button id="menuicon" class="md:hidden bg-green-500 text-white px-4 py-2 rounded">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
+  
+  <!-- Side Navbar (Mobile)  -->
+  <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000 " style="width: 50%;height:100vh; right: -50%;">
+    <div class="text-right p-5">
+      <p id="closenav" class="inline cursor-point">X</p>
+    </div>
+    <ul class="flex flex-col gap-5 items-center text-gray-600 ">
+      <li><a href="./index.html" class="hover:text-green-500">Home</a></li>
+      <li><a href="./product.html" class="hover:text-green-500">Products</a></li>
+      <li><a href="./contact.html" class="hover:text-green-500">Contact</a></li>
+    </ul>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="container mx-auto px-6 py-12">
@@ -71,24 +87,6 @@
     
 
   <!-- Scripts -->
-  <script>
-    
-    // Email Validation
-    function validateEmail() {
-      let email = document.getElementById("email").value;
-      let errorMessage = document.getElementById("error-message");
-      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-      if (!emailPattern.test(email)) {
-        errorMessage.classList.remove("hidden");
-        return false; // Prevent form submission
-      } else {
-        errorMessage.classList.add("hidden");
-        return true;
-      }
-    }
-  
-
-  </script>
+   <script src="index.js">  </script>
 </body>
 </html>

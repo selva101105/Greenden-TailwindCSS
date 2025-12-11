@@ -1,21 +1,38 @@
-document.getElementById('search-input').addEventListener('input', function(event) {
-  let searchQuery = event.target.value.toLowerCase();  // Get the search query in lowercase
-  let productCards = document.querySelectorAll('.product-card');  // Select all product cards
+var sidenav = document.getElementById("sidenav")
+var menuicon = document.getElementById("menuicon")
+var closenav = document.getElementById("closenav")
 
-  productCards.forEach(function(card) {
-      let productName = card.querySelector('h3').textContent.toLowerCase();  // Get product name
-      
-      if (searchQuery === "" || productName.includes(searchQuery)) {
-          card.style.display = 'block'; // Show matching product
-          found = true;
-      } else {
-          card.style.display = 'none'; // Hide non-matching product
+
+menuicon.addEventListener("click", function(){
+  sidenav.style.right=0
+})
+
+closenav.addEventListener("click",function(){
+  sidenav.style.right= "-50%"
+})
+
+
+//Product search functionality
+var productContainer = document.getElementById("product-container")
+var search = document.getElementById("Search")
+var productList = productContainer.querySelectorAll("div")
+
+search.addEventListener("keyup",function(){
+  var enteredValue = event.target.value.toUpperCase()
+
+  for(count=0; count<productList.length; count=count+1)
+    {
+      var productname = productList[count].querySelector("h1").textContent
+
+      if(productname.toUpperCase().indexOf(enteredValue)<0){
+        productList[count].style.display="none"
       }
-  });
-});
+      else{
+        productList[count].style.display="block"
+      }
 
-  // If no products match, show alert
- // if (!found) {
-      //alert("No products found!");
-  //}
-//});
+  }
+})
+
+
+

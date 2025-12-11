@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenden</title>
-    <!-- tailwindcss link -->
+    <!-- tailwindCSS link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-    <!--resposive navbar  -->
-    <!-- Navbar  -->
+  <!--resposive navbar  -->
+  <!-- Navbar -->                       
   <header class="bg-green-200 shadow-lg">
     <div class="container mx-1 flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-black-800">GREENDEN</h1>
@@ -21,20 +19,20 @@
         <a href="product.html" class="hover:underline">Products</a>
         <a href="contact.html" class="hover:underline">Contact</a>
       </nav>
-    
-    <!-- Mobile Menu Button  -->
-      <button id="open-navtion" class="md:hidden bg-green-500 text-white px-4 py-2 rounded">
+  
+  <!-- Mobile Menu Button   -->
+      <button id="menuicon" class="md:hidden bg-green-500 text-white px-4 py-2 rounded">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
   
   <!-- Side Navbar (Mobile)  -->
-  <section id="selva" class="bg-green-100 fixed top-0 right-0 w-3/4 sm:w-1/2 lg:w-1/4 h-full transform translate-x-full transition-transform duration-300 shadow-lg">
+  <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000 " style="width: 50%;height:100vh; right: -50%;">
     <div class="text-right p-5">
-      <p id="close-navtion" class="inline cursor-pointer text-xl font-bold">X</p>
+      <p id="closenav" class="inline cursor-point">X</p>
     </div>
-    <ul class="flex flex-col gap-6 items-center text-gray-600">
+    <ul class="flex flex-col gap-5 items-center text-gray-600 ">
       <li><a href="./index.html" class="hover:text-green-500">Home</a></li>
       <li><a href="./product.html" class="hover:text-green-500">Products</a></li>
       <li><a href="./contact.html" class="hover:text-green-500">Contact</a></li>
@@ -176,7 +174,18 @@
         <p>&copy; 2025 Greenden.</p>
     </footer>
 
-    <script>
+ <script src="index.js">  </script>
+
+
+
+</body>  
+</html>
+
+
+
+
+
+<!-- <script>
         // Side Navbar functionality
     document.getElementById('open-navtion').addEventListener('click', () => {
       document.getElementById('selva').style.transform = 'translateX(0)';
@@ -202,6 +211,4 @@
         window.location.href = "contact.html";
         return false;
     }
-    </script>
-</body>
-</html>
+    </script> -->
